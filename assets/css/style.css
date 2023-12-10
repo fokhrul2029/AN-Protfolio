@@ -1,0 +1,295 @@
+/* 
+    // Import Google Font
+    // font-family: 'Great Vibes', cursive;
+    // font-family: 'Offside', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Roboto Mono', monospace;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Offside&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+/* Replesment CSS  */
+img {
+  max-width: 100%;
+}
+/* =========== = Navbar CSS ============  */
+
+.navbar {
+  margin: 0;
+  padding: 0;
+}
+.navbar-nav {
+  padding: 8px 58px;
+  border-radius: 89pc;
+  margin-top: 50px;
+}
+.navbar button:hover {
+  background-color: #008bd3;
+  border: 2px solid transparent;
+}
+.navbar button i {
+  color: #008bd3;
+  font-size: 31px;
+}
+.navbar button:hover i {
+  color: white;
+}
+
+.navbar button:focus {
+  box-shadow: 0 0 0;
+  outline: none;
+}
+@media (max-width: 992px) {
+  .navbar-nav {
+    margin-top: 0;
+  }
+}
+/*================= Hero-section CSS  ===============*/
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./../images/Home_background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-section img {
+  transition: 0.2s ease-in;
+}
+.hero-section img:hover {
+  transform: scale(1.02);
+}
+.hero-section .row {
+  height: 100vh;
+}
+.hero-section h1 {
+  font-family: "Offside", Sans-serif;
+  font-size: 33px;
+  font-weight: 600;
+}
+.hero-section p {
+  color: #292a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 22px;
+}
+.hero-section i {
+  border: 1px solid transparent;
+  background-color: orange;
+  padding: 5px 8px;
+  border-radius: 100px;
+  margin: 10px 5px 10px 0px;
+}
+.hero-section .contact-btn {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+}
+.hero-section .contact-btn a {
+  padding: 5px 14px 6px 14px;
+}
+/* ========== About CSS ==================  */
+.about-section .about-img {
+  text-align: center;
+}
+.about-section .about-img img {
+  max-width: 300px;
+  text-align: center;
+  margin: auto;
+}
+.about-section .Card {
+  box-shadow: -6px 9px 27px -13px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 66px 56px 75px 56px;
+  border: none;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.about-section .Card h1 {
+  color: #2a2a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 600;
+  border-bottom: 1px solid #00000096;
+  padding-bottom: 13px;
+}
+.about-section .Card i {
+  display: block;
+  font-size: 50px;
+  color: #0000006b;
+}
+.about-section .Card a {
+  margin-bottom: 16px;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  display: block;
+  text-decoration: none;
+}
+.about-section .Card span {
+  margin-bottom: 16px;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  display: block;
+}
+.about-section .Card p {
+  margin-bottom: 16px;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.about-section .Card .sign {
+  color: #000000;
+  font-family: "Great Vibes", Sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+/*=========== Skills-info CSS ===========*/
+.skills-info h1 {
+  color: #2a2a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 500;
+  padding-bottom: 35px;
+}
+.progressBar {
+  padding-top: 10px;
+}
+.progressBar .progress-bar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.progressBar strong {
+  border-top: 1px solid rgba(0, 0, 0, 0.829);
+  font-size: 16.5px;
+}
+.progressBar .progress-bar span {
+  padding: 0 10px;
+  font-size: 16px;
+}
+/* working info  */
+.working-info {
+  padding: 50px 0;
+  background-color: #ececec59;
+}
+.working-info .card-body {
+  padding: 25px 0;
+}
+.working-info h5 {
+  color: #0cb6fe;
+  font-family: "Roboto Mono", Sans-serif;
+  font-size: 37px;
+  font-weight: 600;
+}
+.working-info p {
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+/* ================== Service Section CSS ===============  */
+.service-section {
+  padding: 80px 0 50px 0;
+}
+.service-section .card {
+  margin-bottom: 30px ;
+}
+.service-section h1 {
+  color: #2a2a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 500;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.service-section .card-body {
+  padding: 33px 55px;
+}
+.service-section i {
+  display: block;
+  font-size: 50px;
+  padding-bottom: 0px;
+}
+.service-section h5 {
+  font-family: "Roboto", Sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.service-section p {
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-top: 13px;
+}
+/*=========== experience-section CSS  =============*/
+.experience-section {
+  background-color: rgba(230, 230, 230, 0.288);
+}
+.experience-section h1 {
+  color: #2a2a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 500;
+  padding-bottom: 30px;
+  text-align: center;
+  padding-top: 40px;
+}
+.experience-section .ex-card {
+  border: 1px solid #00000038;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 17px 0;
+  margin-bottom: 30px;
+}
+.experience-section .ex-card i {
+  font-size: 64px;
+  text-align: center;
+  display: block;
+  color: #24cff1;
+}
+.experience-section .ex-card h4 {
+  font-family: "Roboto", Sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.experience-section .ex-card p {
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  color: #0000009c;
+}
+
+/*============ Educational Qualification CSS ============ */
+.qualification-section h1 {
+  color: #2a2a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 500;
+  padding: 40px 0 30px 0;
+}
+.qualification-section .ex-card {
+  border: 1px solid #00000038;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 17px 0;
+}
+.qualification-section .ex-card i {
+  font-size: 64px;
+  text-align: center;
+  display: block;
+  color: #24cff1;
+}
+.qualification-section .ex-card h4 {
+  font-family: "Roboto", Sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+.qualification-section .ex-card p {
+  font-family: "Roboto", Sans-serif;
+  font-weight: 400;
+  color: #0000009c;
+}
