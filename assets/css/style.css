@@ -156,7 +156,7 @@ img {
   padding-bottom: 35px;
 }
 .progressBar {
-  padding-top: 10px;
+  padding-top: 30px;
 }
 .progressBar .progress-bar {
   flex-direction: row;
@@ -195,7 +195,7 @@ img {
   padding: 80px 0 50px 0;
 }
 .service-section .card {
-  margin-bottom: 30px ;
+  margin-bottom: 30px;
 }
 .service-section h1 {
   color: #2a2a2a;
@@ -292,4 +292,36 @@ img {
   font-family: "Roboto", Sans-serif;
   font-weight: 400;
   color: #0000009c;
+}
+/* ============== contact-section ================  */
+.contact-section {
+  padding: 150px 0 300px 0;
+}
+.contact-section h1 {
+  color: #2a2a2a;
+  font-family: "Roboto Mono", Sans-serif;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.contact-section input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #00000038;
+  border-radius: 5px;
+  margin: 10px 0;
+  outline: none;
+}
+.contact-section textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #00000038;
+  border-radius: 5px;
+  margin: 10px 0;
+  outline: none;
+  height: 130px;
+}
+#liveToast {
+  border: 1px solid #ff0000a6;
+  background: #ff000038;
+  width: 100%;
 }
