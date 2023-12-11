@@ -325,3 +325,35 @@ img {
   background: #ff000038;
   width: 100%;
 }
+
+/*=========== Footer CSS ===========*/
+
+.footer-section .container {
+  border-top: 2px solid rgba(0, 0, 0, 0.596);
+  padding: 30px 10px;
+}
+.footer-section strong {
+  color: #303030;
+  font-family: "Offside", Sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+.footer-section span {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6e6e6e;
+  border-left: 2px solid rgba(0, 0, 0, 0.637);
+  padding-left: 7px;
+}
+
+.footer-section i {
+  font-size: 25px;
+  color: #303030;
+  margin-left: 12px;
+  transition: 0.2s ease-in;
+}
+.footer-section i:hover {
+  color: #24cff1;
+}
