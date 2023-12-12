@@ -17,11 +17,22 @@ img {
 .navbar {
   margin: 0;
   padding: 0;
+  background-color: #fff;
+  /* box-shadow: 0px 0px 20px 0px #0000005e; */
+}
+.navbar-brand {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000bb;
+}
+.navbar-brand:hover {
+  color: #008bd3;
 }
 .navbar-nav {
   padding: 8px 58px;
-  border-radius: 89pc;
-  margin-top: 50px;
+  /* border-radius: 89pc; */
+  /* margin-top: 50px; */
 }
 .navbar button:hover {
   background-color: #008bd3;
@@ -38,6 +49,14 @@ img {
 .navbar button:focus {
   box-shadow: 0 0 0;
   outline: none;
+}
+.navbar ul li a {
+  font-family: "Roboto", Sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+.active {
+  color: #0cb6fe !important;
 }
 @media (max-width: 992px) {
   .navbar-nav {
@@ -76,10 +95,17 @@ img {
 }
 .hero-section i {
   border: 1px solid transparent;
-  background-color: orange;
+  background-color: #ffffff;
   padding: 5px 8px;
   border-radius: 100px;
   margin: 10px 5px 10px 0px;
+  color: #0cb6fe;
+  box-shadow: 0 0 3px 0px #0cb6fe;
+  transition: 0.2s ease-in;
+}
+.hero-section i:hover {
+  background-color: #0cb6fe;
+  color: white;
 }
 .hero-section .contact-btn {
   display: flex;
@@ -319,6 +345,9 @@ img {
   margin: 10px 0;
   outline: none;
   height: 130px;
+}
+#liveToastBtn {
+  border: 1px solid transparent;
 }
 #liveToast {
   border: 1px solid #ff0000a6;
