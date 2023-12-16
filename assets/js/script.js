@@ -1,10 +1,10 @@
 // Navigation Js-----------
 window.onscroll = () => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.querySelector("#navbar").style.boxShadow = " 0px 0px 20px 0px #0000005e   ";
-  } else {
     document.querySelector("#navbar").style.boxShadow =
-      " 0 0 0  transparent ";
+      " 0px 0px 20px 0px #0000005e   ";
+  } else {
+    document.querySelector("#navbar").style.boxShadow = " 0 0 0  transparent ";
   }
 };
 
