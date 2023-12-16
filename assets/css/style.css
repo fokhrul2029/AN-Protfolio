@@ -124,6 +124,18 @@ img {
   text-align: center;
   margin: auto;
 }
+.about-section .about-img img:hover {
+  animation: zoomInOut 0.7s infinite;
+}
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 .about-section .Card {
   box-shadow: -6px 9px 27px -13px rgba(0, 0, 0, 0.5);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;

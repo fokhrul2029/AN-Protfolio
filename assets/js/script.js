@@ -18,3 +18,13 @@ if (toastTrigger) {
     toastBootstrap.show();
   });
 }
+
+// Typed.js / js for Typing on Text
+var typed = new Typed(".typedJs", {
+  strings: [
+    "I'M AN MAMUN.",
+  ],
+  typeSpeed: 60,
+  loop: true,
+  backSpeed: 50,
+});
