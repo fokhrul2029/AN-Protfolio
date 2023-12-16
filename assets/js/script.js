@@ -1,3 +1,5 @@
+// AOS Animation / Animation on scroll 
+AOS.init();
 // Navigation Js-----------
 window.onscroll = () => {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
