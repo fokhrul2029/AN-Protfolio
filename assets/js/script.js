@@ -1,3 +1,25 @@
+// ------------Loader----------------------
+// document.addEventListener("DOMContentLoaded", function () {
+//   // Simulate content loading delay
+//   setTimeout(function () {
+//     // Hide loader and show main content
+//     document.getElementById("loader-container").style.display = "none";
+//     document.getElementById("main-content").style.display = "block";
+//   }, 500); // Adjust the delay time (in milliseconds) based on your needs
+  
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Simulate content loading delay
+  setTimeout(function () {
+    // Hide loader and show main content
+    document.getElementById("loader-container").style.display = "none";
+    document.getElementById("main-content").style.display = "block";
+  }, 200); // Adjust the delay time (in milliseconds) based on your needs
+});
+
+
+
 // AOS Animation / Animation on scroll 
 AOS.init();
 // Navigation Js-----------
@@ -26,7 +48,54 @@ var typed = new Typed(".typedJs", {
   strings: [
     "I'M AN MAMUN.",
   ],
-  typeSpeed: 60,
+  typeSpeed: 10,
   loop: true,
   backSpeed: 50,
 });
+
+
+// From sublit action 
+function showLoading(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  var popup = document.getElementById('loadingPopup');
+  var formButton = document.getElementById('liveToastBtn'); // Add an ID to the submit button
+
+  // Clear the form fields
+  document.getElementById('contactForm').reset();
+
+  // Position the popup just below the button
+  popup.style.top = formButton.offsetTop + formButton.offsetHeight + 'px';
+  popup.style.display = 'block';
+
+  // Set a timeout to hide the popup after 5 seconds (5000 milliseconds)
+  setTimeout(function () {
+      popup.style.display = 'none';
+  }, 5000);
+}
+
+
+
+// skill section
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all elements with class 'progressBar'
+  var progressBars = document.querySelectorAll('.progressBar');
+
+  // Loop through each progress bar
+  progressBars.forEach(function (progressBar) {
+    // Get the inner progress bar element
+    var innerProgressBar = progressBar.querySelector('.progress-bar');
+
+    // Get the initial width of the progress bar
+    var initialWidth = parseInt(innerProgressBar.style.width) || 0;
+
+    // Add a click event listener to the progress bar
+    progressBar.addEventListener('click', function () {
+      // Toggle the width between 0% and the initial width
+      innerProgressBar.style.width = innerProgressBar.style.width === '0%' ? initialWidth + '%' : '0%';
+    });
+  });
+});
+
+
+

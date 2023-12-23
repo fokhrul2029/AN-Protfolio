@@ -12,6 +12,8 @@
     />
     <!-- AOS Animation  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-9l/3U2N6tK1aCM8T2DYOFNcaXprOqnp1Jqp0cx3om8YsIXt1NjTwkWg5t4W+JmW/xFphM08O1AA9eDuoOZrxuw==" crossorigin="anonymous" />
+
     <!-- Bootstrap icons CDN -->
     <link
       rel="stylesheet"
@@ -24,12 +26,28 @@
     <title>AN.MAMUN</title>
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- icon -->
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+
   </head>
   <body>
+     <!-- Loader Container -->
+     <div id="loader-container">
+      <div class="bubble-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </div>
+     <!-- Loader Container END -->
+    
+
+
     <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top py-4">
       <div class="container">
-        <a class="navbar-brand fs-2 fw-bold" href="#">AN.MAMUN</a>
+        <!-- <a class="navbar-brand fs-2 fw-bold" href="#">AN.MAMUN</a> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -49,17 +67,18 @@
               >
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="blog.html#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Project</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#gallary">Gallary</a>
+            </li> -->
+            <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#qualifications">Qualifications</a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
@@ -82,15 +101,15 @@
                 HAY!
                 <span class="typedJs"></span>
               </h1>
-              <p data-aos="zoom-in" data-aos-duration="2000">
-                Expert in Web Development and Programming
+              <p data-aos="fade-right" data-aos-duration="2000">
+                Expert in Softwer Development and Programming.
               </p>
               <div
                 data-aos="fade-up"
                 data-aos-duration="3000"
                 class="socail-icon"
               >
-                <a href="https://web.facebook.com/anmamun0/"
+                <a class="one" href="https://web.facebook.com/anmamun0/"
                   ><i class="bi bi-facebook"></i
                 ></a>
                 <a href="https://twitter.com/anmamun0"
@@ -115,14 +134,24 @@
                 data-aos-duration="2000"
                 class="contact-btn mt-4"
               >
-                <a class="btn btn-primary" href="#">Contact</a>
-                <a
-                  class="btn btn-outline-primary"
-                  href="https://drive.google.com/file/d/1z-UiQMQiyIkaFKDPXmdVkBPg-tlwSwfX/view"
-                  >Get Resume</a
-                >
+                <a class="btn btn-primary" href="#contact">Contact</a>
+
+               
+                <a class="ball" href="assets/images/New_my_CV.pdf" class="nav-link" download>Get
+                  Resume
+                  <div class="span-wrapper">
+                    <span class="s1"></span>
+                    <span class="s2"></span>
+                    <span class="s3"></span>
+                  </div>
+                </a>
+                  
+      
               </div>
+
             </div>
+
+            <!-- HOme Up scrole auto section -->
             <div class="col-md-6 col-sm-12 d-none d-md-block">
               <img
                 data-aos="zoom-in"
@@ -130,9 +159,14 @@
                 src="assets/images/My_full_body_pic.png"
                 alt="AN.MAMUN"
               />
+                <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ti-angle-double-up"></i></button>
             </div>
+            <!-- HOme Up scrole auto section END -->
+
           </div>
         </div>
+      
+
       </section>
       <!-- About section  -->
       <section id="about" class="about-section">
@@ -149,22 +183,19 @@
             </div>
             <div data-aos="zoom-in" data-aos-duration="1500" class="col-md-6">
               <div class="Card">
-                <h1>Personal Details</h1>
+                <h1>About Me</h1>
                 <i class="bi bi-quote"></i>
                 <a href="mailto:almamun20044@gmail.com">
                   Mail: almamun20044@gmail.com
                 </a>
-                <span>Language: English</span>
-                <span>National: Bangladesh</span>
+                <span>Language  : English</span>
+                <span>National   : Bangladesh</span>
                 <p>
-                  I am a highly competent IT professional with a proven track
-                  record in designing websites, networking, and managing
-                  databases. I have strong technical skill as well as excellent
-                  interpersonal skills, enabling me to interact with a wide
-                  range of clients. I am eager to be challenge ding order to
-                  grow and further improve my IT skills. My greeter’s passion in
-                  life is using my technical know-how to benefit other people
-                  and organizations.
+                  I am a passionate and detail-oriented software 
+                  engineer with a strong background in web development 
+                  and a knack for problem-solving. My goal is to create 
+                  robust and scalable software solutions that meet the 
+                  needs of users and businesses.
                 </p>
                 <span class="sign"> ANMamun </span>
               </div>
@@ -172,7 +203,7 @@
           </div>
           <!-- Skills Info -->
           <div id="skills" class="skills-info pt-5 mt-5">
-            <h1 data-aos="fade-right" data-aos-duration="1000">Skill Set</h1>
+            <h2 data-aos="fade-right" data-aos-duration="1000">Skill Set</h2>
             <div class="row align-items-center justify-content-between">
               <div class="col-md-6 px-2">
                 <div
@@ -180,7 +211,7 @@
                   data-aos-duration="1000"
                   class="progressBar"
                 >
-                  <strong>WEB DESIGN</strong>
+                  <strong>Frontend WEB Technologies</strong>
                   <div
                     class="progress"
                     role="progressbar"
@@ -191,7 +222,7 @@
                     style="height: 20px"
                   >
                     <div class="progress-bar bg-info" style="width: 100%">
-                      <span>WORDPRESS , SHOPIFAY</span>
+                      <span>HTML5, CSS3, RESPONSIVE DESIGN</span>
                       <span>100%</span>
                     </div>
                   </div>
@@ -201,7 +232,7 @@
                   data-aos-duration="1000"
                   class="progressBar"
                 >
-                  <strong>WEB DEVELOPMENT</strong>
+                  <strong>Version Control</strong>
                   <div
                     class="progress"
                     role="progressbar"
@@ -212,7 +243,7 @@
                     style="height: 20px"
                   >
                     <div class="progress-bar bg-info" style="width: 80%">
-                      <span>HTML, CSS, JavaScript</span>
+                      <span>GIT, GITHUB, VS_CODE</span>
                       <span>80%</span>
                     </div>
                   </div>
@@ -222,19 +253,19 @@
                   data-aos-duration="1000"
                   class="progressBar"
                 >
-                  <strong>WEB DESIGN</strong>
+                  <strong>TOOLS & FRAMEWORKS</strong>
                   <div
                     class="progress"
                     role="progressbar"
                     aria-label="Example 20px high"
-                    aria-valuenow="60"
+                    aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
                     style="height: 20px"
                   >
-                    <div class="progress-bar bg-info" style="width: 60">
-                      <span>WORDPRESS , SHOPIFAY</span>
-                      <span>60%</span>
+                    <div class="progress-bar bg-info" style="width: 100%">
+                      <span>FLASK, DJANGO</span>
+                      <span>100%</span>
                     </div>
                   </div>
                 </div>
@@ -243,19 +274,19 @@
                   data-aos-duration="1000"
                   class="progressBar"
                 >
-                  <strong>WEB DESIGN</strong>
+                  <strong>Data Bases</strong>
                   <div
                     class="progress"
                     role="progressbar"
                     aria-label="Example 20px high"
-                    aria-valuenow="65"
+                    aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
                     style="height: 20px"
                   >
-                    <div class="progress-bar bg-info" style="width: 65%">
-                      <span>WORDPRESS , SHOPIFAY</span>
-                      <span>65%</span>
+                    <div class="progress-bar bg-info" style="width: 95%">
+                      <span>SQL , MONGOBD</span>
+                      <span>90%</span>
                     </div>
                   </div>
                 </div>
@@ -271,14 +302,14 @@
                     class="progress"
                     role="progressbar"
                     aria-label="Example 20px high"
-                    aria-valuenow="60"
+                    aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
                     style="height: 20px"
                   >
-                    <div class="progress-bar bg-info" style="width: 60%">
+                    <div class="progress-bar bg-info" style="width: 90%">
                       <span>C LANGUAGE</span>
-                      <span>60%</span>
+                      <span>90%</span>
                     </div>
                   </div>
                 </div>
@@ -297,9 +328,9 @@
                     aria-valuemax="100"
                     style="height: 20px"
                   >
-                    <div class="progress-bar bg-info" style="width: 50%">
+                    <div class="progress-bar bg-info" style="width: 90%">
                       <span>C++ LANGUAGE</span>
-                      <span>50%</span>
+                      <span>90%</span>
                     </div>
                   </div>
                 </div>
@@ -339,9 +370,9 @@
                     aria-valuemax="100"
                     style="height: 20px"
                   >
-                    <div class="progress-bar bg-info" style="width: 40%">
+                    <div class="progress-bar bg-info" style="width: 90%">
                       <span>JAVA LANGUAGE</span>
-                      <span>40%</span>
+                      <span>90%</span>
                     </div>
                   </div>
                 </div>
@@ -360,7 +391,7 @@
                   <h5 class="card-title text-center text-info fs-1 pt-2">
                     70%
                   </h5>
-                  <p class="card-text text-center">Big Project</p>
+                  <p class="card-text text-center">Leet Code</p>
                 </div>
               </div>
             </div>
@@ -368,9 +399,19 @@
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center text-info fs-1 pt-2">
-                    25+
+                    90+
                   </h5>
-                  <p class="card-text text-center">Reject</p>
+                  <p class="card-text text-center">CodeForce</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+              <div data-aos="fade-down" data-aos-duration="1000" class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center text-info fs-1 pt-2">
+                    70%
+                  </h5>
+                  <p class="card-text text-center">Code Shef</p>
                 </div>
               </div>
             </div>
@@ -380,36 +421,29 @@
                   <h5 class="card-title text-center text-info fs-1 pt-2">
                     90%
                   </h5>
-                  <p class="card-text text-center">Star</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-12">
-              <div data-aos="fade-down" data-aos-duration="1000" class="card">
-                <div class="card-body">
-                  <h5 class="card-title text-center text-info fs-1 pt-2">
-                    75%
-                  </h5>
-                  <p class="card-text text-center">Success</p>
+                  <p class="card-text text-center">CP</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Service Section  -->
-      <section id="service" class="service-section">
+      <!-- View Project  -->
+      <section id="projects" class="service-section">
         <div class="container py-5">
-          <h1 data-aos="fade-right" data-aos-duration="1000">Awsome Service</h1>
+          <h2 data-aos="fade-right" data-aos-duration="1000">View Project</h2>
           <div class="row">
             <div class="col-md-4 col-sm-6 col-12">
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
                   <i class="bi bi-display"></i>
-                  <h5 class="card-title text-info">Problem</h5>
+                  <h5 class="card-title text-info">Task Manangement App</h5>
                   <p class="card-text">
-                    i can solove c and c++ and pyhton and java program. if you
-                    break in you problem. contact me.
+                    Created a task management application with a 
+                    responsive design using Djongo. <br>
+                    Implemented drag-and-drop functionality for 
+                    task organization. <br> Utilized local storage for 
+                    offline access and seamless user experience.<br>
                   </p>
                 </div>
               </div>
@@ -418,10 +452,11 @@
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
                   <i class="bi bi-code-slash"></i>
-                  <h5 class="card-title text-info">Sloved</h5>
+                  <h5 class="card-title text-info">Blogify Engine</h5>
                   <p class="card-text">
-                    i can solove c and c++ and pyhton and java program. if you
-                    break in you problem. contact me.
+                    Developed a blog engine using Flask and MongoDB.<br>
+                  Implemented user authentication, role-based access control, and comment functionality.<br>
+                  Ensured responsive design for optimal user experience on various devices.<br>
                   </p>
                 </div>
               </div>
@@ -430,10 +465,12 @@
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
                   <i class="bi bi-braces-asterisk"></i>
-                  <h5 class="card-title text-info">Problem</h5>
+                  <h5 class="card-title text-info">E-Commerce Hub</h5>
                   <p class="card-text">
-                    i can solove c and c++ and pyhton and java program. if you
-                    break in you problem. contact me.
+                    Developed a feature-rich e-commerce platform using Python.<br>
+                    Integrated Stripe for secure online transactions.<br>
+                    Implemented JWT-based authentication for enhanced security.<br>
+                    Optimized performance for a seamless shopping experience.<br>
                   </p>
                 </div>
               </div>
@@ -444,8 +481,9 @@
       <!-- Experience Section  -->
       <section id="qualifications" class="experience-section py-5">
         <div class="container">
-          <h1 data-aos="fade-right" data-aos-duration="1000">Experience</h1>
+          <h2 data-aos="fade-right" data-aos-duration="1000">Experience</h2>
           <div class="row justify-content-between">
+            
             <div class="col-md-6 row align-items-center">
               <div
                 data-aos="fade-down"
@@ -461,6 +499,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-md-6 row align-items-center">
               <div
                 data-aos="fade-down"
@@ -476,19 +515,63 @@
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
+
+        <div class="container">
+          <!-- <h1 data-aos="fade-right" data-aos-duration="1000">Experience</h1> -->
+          <div class="row justify-content-between">
+            
+            <div class="col-md-6 row align-items-center">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                class="ex-card"
+              >
+                <div class="col-4">
+                  <i class="bi bi-pencil-fill"></i>
+                </div>
+                <div class="col-8">
+                  <h4>Web Design</h4>
+                  <p>EXPERIENCE : 2 YEAR</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 row align-items-center">
+              <div
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                class="ex-card"
+              >
+                <div class="col-4">
+                  <i class="bi bi-pencil-fill"></i>
+                </div>
+                <div class="col-8">
+                  <h4>Up Work Platfrom</h4>
+                  <p>EXPERIENCE : 2 YEAR</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+        
       </section>
       <!-- Education Qualification  -->
       <section class="qualification-section py-5">
         <div class="container">
-          <h1
+          <h2
             data-aos="fade-right"
             data-aos-duration="1000"
             class="text-center"
           >
             Education Qualification
-          </h1>
+          </h2>
           <div class="row justify-content-between">
             <div class="col-md-6 row align-items-center py-4">
               <div
@@ -516,7 +599,7 @@
                 </div>
                 <div class="col-8">
                   <h4>Sylhet Politechnic Institute</h4>
-                  <p>Computer Science (Deploma)</p>
+                  <p>Computer Science and Engineering (Deploma)</p>
                 </div>
               </div>
             </div>
@@ -565,39 +648,52 @@
               <img src="assets/images/contact img.png" alt="Contact Image" />
             </div>
             <div class="col-md-5">
-              <h1 data-aos-duration="1000" data-aos="fade-down">Contact Me</h1>
-              <form action="#">
+              
+
+              <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel"
+                    aria-labelledby="nav-ContactForm-tab">
+
+                <form id="contactForm" class="custom-form contact-form mb-5 mb-lg-0" action="#" method="post" role="form" action="assets/js/submitFrom.php" onsubmit="showLoading(event)">
                 <div
+                  class="contact-form-body"
                   data-aos-duration="1000"
                   data-aos="fade-down"
                   class="d-flex gap-2 fs-5 fw-bold"
                 >
-                  <span class="d-inline">Contact Email: </span>
+                <h2 data-aos-duration="1000" data-aos="fade-down">Contact Me</h2>
+                  <span class="d-inline">Contact Email : </span>
                   <a
                     class="nav-link text-danger"
                     href="mailto:almamun20044@gmail.com"
                     >almamun20044@gmail.com</a
                   >
                 </div>
+
                 <input
                   data-aos-duration="1000"
                   data-aos="fade-down"
                   type="text"
                   placeholder="Name"
                   required
-                />
+                  class="form-control"
+                /> 
                 <input
                   data-aos-duration="1000"
                   data-aos="fade-down"
                   type="email"
                   placeholder="Email"
                   required
+                  class="form-control"
+
                 />
                 <textarea
                   data-aos-duration="1000"
                   data-aos="fade-down"
                   placeholder="Message"
                   required
+                  class="form-control"
+
                 ></textarea>
                 <div
                   class="toast align-items-center"
@@ -605,32 +701,35 @@
                   id="liveToast"
                   aria-live="assertive"
                   aria-atomic="false"
+                  class="form-control"
+
                 >
-                  <div class="d-flex">
-                    <div class="toast-body fw-bold">
-                      This features is not Ready yet 🙂
-                    </div>
-                    <button
-                      type="button"
-                      class="btn-close me-2 m-auto"
-                      data-bs-dismiss="toast"
-                      aria-label="Close"
-                    ></button>
-                  </div>
                 </div>
                 <input
                   data-aos-duration="1000"
                   data-aos="fade-down"
                   id="liveToastBtn"
-                  type="button"
+                  type="submit"
                   value="Send"
                   class="btn btn-info text-light"
                 />
-              </form>
+              </form> 
+              <div class="popup" id="loadingPopup" style="display: none;">
+                <div class="popup-content">
+                    Sending your mail...
+                </div>
+            </div>
+
+            </div></div>
             </div>
           </div>
         </div>
       </section>
+      
+      <!-- Display Click Effect -->
+      <div class="ripple"></div>
+      <!-- Display Click Effected End -->
+
       <!-- =============== Footer Section ================  -->
       <footer class="footer-section">
         <div class="container">
@@ -638,7 +737,7 @@
             <div
               class="col-md-6 d-block text-center d-md-flex align-items-center gap-2"
             >
-              <img src="assets/images/an-mamun.png" alt="" />
+              <img src="assets/images/an-mamun.png" alt="an-mamun.png" />
               <div>
                 <strong>AN.Mamun &copy; </strong> <br />
                 <span>almamun20044@gmail.com</span>
@@ -646,23 +745,22 @@
             </div>
             <div class="col-md-6">
               <div class="socail-icon text-center text-md-end">
-                <a href="https://web.facebook.com/anmamun0/"
+                <a target="_blank" href="https://web.facebook.com/anmamun0/"
                   ><i class="bi bi-facebook"></i
                 ></a>
-                <a href="https://twitter.com/anmamun0"
+                <a target="_blank" href="https://twitter.com/anmamun0"
                   ><i class="bi bi-twitter"></i
                 ></a>
-                <a
-                  href="https://www.youtube.com/channel/UCmunP9J4cGIJMhF2kXYSaqQ"
+                <a target="_blank" href="https://www.youtube.com/channel/UCmunP9J4cGIJMhF2kXYSaqQ"
                   ><i class="bi bi-youtube"></i
                 ></a>
-                <a href="https://www.linkedin.com/in/anmamun0/"
+                <a target="_blank" href="https://www.linkedin.com/in/anmamun0/"
                   ><i class="bi bi-linkedin"></i
                 ></a>
-                <a href="https://github.com/anmamun0"
+                <a target="_blank"  href="https://github.com/anmamun0"
                   ><i class="bi bi-github"></i
                 ></a>
-                <a href="https://codeforces.com/profile/anmamun0"
+                <a target="_blank" href="https://codeforces.com/profile/anmamun0"
                   ><i class="bi bi-link-45deg"></i
                 ></a>
               </div>
@@ -670,6 +768,8 @@
           </div>
         </div>
       </footer>
+
+
     </main>
     <!-- Bootstrap JS  -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -679,5 +779,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS  -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/blog.js"></script>
+    <!-- Mouse Click Pointer Effect -->
+    <script src="assets/js/rippleEffect.js"></script>
+
+
+  
   </body>
 </html>

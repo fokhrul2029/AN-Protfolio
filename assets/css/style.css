@@ -8,40 +8,92 @@
     // font-family: 'Roboto Mono', monospace;
 */
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Offside&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+/* Ripple Effect */
+body {
+  background: #FFFFFF;
+  margin: 0;
+  transition: .25s ease-in-out;
+}
+/*Ripple*/
+.ripple {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: fixed;
+}
+/*Animate Function*/
+.animate {
+  animation: ripple-mo 1s cubic-bezier(0, 0, 0.2, 1);
+}
+@keyframes ripple-mo {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+/* Ripple Effect END-----------------*/
+
+
+
+
 /* Replesment CSS  */
 img {
   max-width: 100%;
 }
-/* =========== = Navbar CSS ============  */
+h1, h2, h3, h4, h5, h6 {
 
+  font-family: 'Baloo Paaji', cursive;
+}
+/* =========== = Navbar CSS ============  */
+/* Navbar CSS */
 .navbar {
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  /* box-shadow: 0px 0px 20px 0px #0000005e; */
+  height: 80px;
+  background-color: #ffffff00;
+  box-shadow: none;
+  position: absolute;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar-brand {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: #000000bb;
+  transition: color 0.3s ease;
 }
+
 .navbar-brand:hover {
   color: #008bd3;
 }
+
 .navbar-nav {
   padding: 8px 58px;
-  /* border-radius: 89pc; */
-  /* margin-top: 50px; */
 }
+
+.navbar button {
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
 .navbar button:hover {
   background-color: #008bd3;
-  border: 2px solid transparent;
+  border: 2px solid #008bd3;
 }
+
 .navbar button i {
   color: #008bd3;
   font-size: 31px;
+  transition: color 0.3s ease;
 }
+
 .navbar button:hover i {
   color: white;
 }
@@ -50,19 +102,58 @@ img {
   box-shadow: 0 0 0;
   outline: none;
 }
+
+.navbar ul {
+  background-color: rgba(252, 252, 252, 0);
+  border-radius: 50px;
+  box-shadow: 0px 10px 27px -20px rgb(161, 160, 160);
+  margin-top: 20px;
+  width: 40%;
+  align-items: center;
+  padding-left: 100px;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar ul:hover {
+  box-shadow: 0px 10px 37px -15px rgb(161, 160, 160);
+}
+
+.navbar ul li {
+  position: relative;
+}
+
 .navbar ul li a {
   font-family: "Roboto", Sans-serif;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #0cb6fe;
+}
+
+.navbar ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0cb6fe;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li.active a::after {
+  width: 100%;
 }
 .active {
   color: #0cb6fe !important;
 }
-@media (max-width: 992px) {
-  .navbar-nav {
-    margin-top: 0;
-  }
-}
+
 /*================= Hero-section CSS  ===============*/
 .hero-section {
   width: 100%;
@@ -71,9 +162,13 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0px 0px 27px -10px rgb(95, 95, 95);
+
+  /* margin-left: 80px 0px 0px 50px; */
 }
 .hero-section img {
   transition: 0.2s ease-in;
+  cursor: pointer;
 }
 .hero-section img:hover {
   transform: scale(1.02);
@@ -92,35 +187,238 @@ img {
   font-size: 20px;
   font-weight: 400;
   padding-bottom: 22px;
+
 }
-.hero-section i {
-  border: 1px solid transparent;
-  background-color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 100px;
-  margin: 10px 5px 10px 0px;
-  color: #0cb6fe;
-  box-shadow: 0 0 3px 0px #0cb6fe;
-  transition: 0.2s ease-in;
+
+/* Updated styles for social icons with brand colors and a scale effect on hover */
+.hero-section .socail-icon {
+  display: flex;
+  gap: 20px;
 }
-.hero-section i:hover {
-  background-color: #0cb6fe;
+
+.hero-section .socail-icon a {
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Customize the colors for each social icon */
+.hero-section .socail-icon a:nth-child(1) {
+  color: #1877f2; /* Facebook blue */
+}
+
+.hero-section .socail-icon a:nth-child(2) {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.hero-section .socail-icon a:nth-child(3) {
+  color: #ff0000; /* YouTube red */
+}
+
+.hero-section .socail-icon a:nth-child(4) {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.hero-section .socail-icon a:nth-child(5) {
+  color: #333; /* GitHub black */
+}
+
+.hero-section .socail-icon a:nth-child(6) {
+  color: #25d366; /* WhatsApp green */
+}
+
+.hero-section .socail-icon a:hover {
+  transform: scale(1.2);
+}
+
+.hero-section .socail-icon i {
+  display: inline-block;
+  margin-right: 5px;
+  transform: translateY(3px);
+}
+
+.hero-section .socail-icon a:first-child {
+  margin-left: 0;
+}
+
+.hero-section .socail-icon a:last-child {
+  margin-right: 0;
+}
+
+.hero-section .socail-icon {
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .socail-icon a {
+  display: flex;
+  align-items: center;
+}
+
+/* Hover effect for the scroll-to-top button */
+#myBtn:hover {
+  background-color: #07d6ff55;
+  border: 2px solid rgb(255, 255, 255);
+  color: black;
+}
+/* Conctact Butthon */
+.btn{
   color: white;
+  background-color: #1eb8f4;
+  border-color: white;
+  border-radius: 9px;
 }
+.btn:hover{
+  background-color: #39bff4;
+  border-color: white;
+  border-radius: 9px;
+  
+}
+
 .hero-section .contact-btn {
   display: flex;
   gap: 20px;
   padding-top: 15px;
+  
+
 }
 .hero-section .contact-btn a {
   padding: 5px 14px 6px 14px;
 }
+
+.container .d-md-block{
+  margin-top: 100px;
+  transition: all 0.3s ease;
+
+}
+
+
+/* --------Home UP SCEOLe SECTION--------- */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 17px 10px rgb(180, 178, 178);
+  transition: background-color 0.3s ease;
+}
+
+#myBtn .ti-angle-double-up {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+#myBtn:hover {
+  background-color: #07d6ffda;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 253, 253);
+}
+
+#myBtn:hover .ti-angle-double-up {
+  transform: translateY(-5px);
+}
+/*--------Home UP SCEOLe SECTION END --------- */
+
+/* ------------Get Resuem Button Animation -------------------- */
+
+/* Global Styles */
+:root {
+  --font: calibri;
+  --main-clr: #1eb8f4;
+}
+
+.ball {
+  color:var(--main-clr);
+  user-select: none;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  font-family: var(--font);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--main-clr);
+  border-radius: 15px;
+  position: relative;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  letter-spacing: 3px;
+  color: black;
+
+}
+
+/* The Span Wapper tag */
+.span-wrapper {
+  height: 100%;
+  position: absolute;
+  inset:0 -2px -4px 0;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 16px;
+
+
+}
+
+/* The span tags */
+.span-wrapper span {
+  background-color: var(--main-clr);
+  width: 30%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.8) translateY(125%) translateZ(0);
+  transition: all 1s ease;
+  
+}
+
+/* The Three Individual Span Tag */
+  .s1 {
+  left: -10%;
+  transition-delay: 0ms;
+}
+  .s2 {
+  left: 30%;
+  transition-delay: 500ms;
+}
+  .s3 {
+  left: 70%;
+  transition-delay: 800ms;
+}
+
+/* Hover State of the parent anchor tag */
+  .ball:hover {
+  color: #fff;  
+  border-color: rgb(196, 190, 190);
+}
+
+  .ball:hover .span-wrapper span {
+  transform: scale(1.7) translateY(0) translateZ(0);
+}
+
+/* ------------Get Resuem Button Animation  Ended-------------------- */
+
+/*================= Hero-section CSS END  ===============*/
+
+
 /* ========== About CSS ==================  */
+
+.about-section .Card{
+  margin-left: -100px;
+}
 .about-section .about-img {
   text-align: center;
+  width: 40%;
+  cursor: pointer;
 }
 .about-section .about-img img {
-  max-width: 300px;
+  max-width: 250px;
   text-align: center;
   margin: auto;
 }
@@ -139,14 +437,16 @@ img {
 .about-section .Card {
   box-shadow: -6px 9px 27px -13px rgba(0, 0, 0, 0.5);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-  padding: 66px 56px 75px 56px;
+  padding: 40px 20px 30px 56px;
   border: none;
   background-color: #fff;
   border-radius: 30px;
+
 }
 .about-section .Card h1 {
-  color: #2a2a2a;
-  font-family: "Roboto Mono", Sans-serif;
+  color: #4a4949;
+  /* font-family: "Roboto Mono", Sans-serif; */
+  font-family: 'Baloo Paaji', cursive;
   font-weight: 600;
   border-bottom: 1px solid #00000096;
   padding-bottom: 13px;
@@ -177,7 +477,7 @@ img {
   margin-bottom: 16px;
   font-family: Open Sans;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
 }
 .about-section .Card .sign {
@@ -186,64 +486,123 @@ img {
   font-weight: 400;
   font-size: 40px;
 }
+
+/* ========== About CSS END==================  */
+
+
+
 /*=========== Skills-info CSS ===========*/
-.skills-info h1 {
-  color: #2a2a2a;
-  font-family: "Roboto Mono", Sans-serif;
+.skills-info h2 {
+  color: #4a4949;
+
   font-weight: 500;
   padding-bottom: 35px;
+  text-align: center;
 }
 .progressBar {
   padding-top: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .progressBar .progress-bar {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
 }
 .progressBar strong {
-  border-top: 1px solid rgba(0, 0, 0, 0.829);
+  border-top: 1px solid rgba(73, 73, 73, 0.829);
   font-size: 16.5px;
+  font-weight: 200;
+  font-family: 'Baloo Paaji', cursive;
 }
 .progressBar .progress-bar span {
   padding: 0 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
-/* working info  */
+
+/*=========== Skills-info CSS END===========*/
+
+/*===========  working info  ===========*/
 .working-info {
   padding: 50px 0;
   background-color: #ececec59;
+  transition: all 0.3s ease;
+
+
 }
-.working-info .card-body {
+.card-body{
+  transition: all 0.3s ease;
+  
+}
+.working-info .row .card{
+  width: 90%;
+  margin-left: auto;
+  height: 150px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.working-info .row .card:hover {
+  background: var(--white-color);
+  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
+  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
+
+  /* border-color: transparent; */
+  transform: translateY(-3px);
+}
+.working-info .fade-down{
   padding: 25px 0;
+
 }
 .working-info h5 {
   color: #0cb6fe;
-  font-family: "Roboto Mono", Sans-serif;
+
   font-size: 37px;
   font-weight: 600;
 }
 .working-info p {
   font-family: "Roboto Mono", Sans-serif;
   font-weight: 400;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
 }
-/* ================== Service Section CSS ===============  */
+/*===========  working info  END ===========*/
+
+
+
+/* ================== View Project Section CSS ===============  */
 .service-section {
-  padding: 80px 0 50px 0;
+  padding: 80px 0 10px 0;
+  margin-top: -50px;
+
 }
-.service-section .card {
-  margin-bottom: 30px;
+.service-section .col-md-4 .card{
+ width: 100%;
+ height: 90%;
+ border-radius: 25px;
+ padding-bottom: 30px;
+ transition: all 0.3s ease;
+ background:rgba(144, 213, 243, 0.082) ;
+
 }
-.service-section h1 {
-  color: #2a2a2a;
-  font-family: "Roboto Mono", Sans-serif;
+
+.service-section .card:hover{
+  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
+  /* background: var(--white-color); */
+  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+.service-section h2 {
+  color: #4a4949;
+ 
   font-weight: 500;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   text-align: center;
 }
 .service-section .card-body {
-  padding: 33px 55px;
+  padding: 30px 40px;
 }
 .service-section i {
   display: block;
@@ -251,37 +610,57 @@ img {
   padding-bottom: 0px;
 }
 .service-section h5 {
-  font-family: "Roboto", Sans-serif;
+ 
   font-size: 24px;
   font-weight: 400;
 }
 .service-section p {
   font-family: "Roboto", Sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   margin-top: 13px;
+  color: #363535;
+
 }
+/* ================== View Project Section CSS ===============  */
+
+
 /*=========== experience-section CSS  =============*/
 .experience-section {
+  
   background-color: rgba(230, 230, 230, 0.288);
+
 }
-.experience-section h1 {
-  color: #2a2a2a;
-  font-family: "Roboto Mono", Sans-serif;
+.experience-section h2 {
+  color: #4a4949;
+
   font-weight: 500;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
+
 .experience-section .ex-card {
+  width: 90%;
   border: 1px solid #00000038;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 17px 0;
   margin-bottom: 30px;
+  /* transition: all 0.3s ease; */
+
+  
+}
+.experience-section .ex-card:hover{
+  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
+  /* background: var(--white-color); */
+  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
+  /* border-color: transparent; */
+  /* transform: translateY(-3px); */
+
 }
 .experience-section .ex-card i {
   font-size: 64px;
@@ -290,8 +669,8 @@ img {
   color: #24cff1;
 }
 .experience-section .ex-card h4 {
-  font-family: "Roboto", Sans-serif;
-  font-size: 30px;
+
+  font-size: 25px;
   font-weight: 500;
 }
 .experience-section .ex-card p {
@@ -300,21 +679,37 @@ img {
   color: #0000009c;
 }
 
+/*=========== experience-section CSS END =============*/
+
+
 /*============ Educational Qualification CSS ============ */
-.qualification-section h1 {
-  color: #2a2a2a;
-  font-family: "Roboto Mono", Sans-serif;
+.qualification-section h2 {
+  color: #4a4949;
+
   font-weight: 500;
   padding: 40px 0 30px 0;
 }
 .qualification-section .ex-card {
+  width: 90%;
+
   border: 1px solid #00000038;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 17px 0;
+  /* transition: all 0.3s ease; */
+
 }
+.qualification-section .ex-card:hover{
+  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
+  /* background: var(--white-color); */
+  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
+  /* border-color: transparent; */
+  /* transform: translateY(-3px); */
+
+}
+
 .qualification-section .ex-card i {
   font-size: 64px;
   text-align: center;
@@ -322,8 +717,8 @@ img {
   color: #24cff1;
 }
 .qualification-section .ex-card h4 {
-  font-family: "Roboto", Sans-serif;
-  font-size: 30px;
+
+  font-size: 20px;
   font-weight: 500;
 }
 .qualification-section .ex-card p {
@@ -333,13 +728,28 @@ img {
 }
 /* ============== contact-section ================  */
 .contact-section {
-  padding: 150px 0 300px 0;
+  padding: 10px 0 350px 0;
+  text-align: center;
+  background-color: #ececec59;
 }
-.contact-section h1 {
-  color: #2a2a2a;
-  font-family: "Roboto Mono", Sans-serif;
+
+.contact-section h2 {
+  color: #4a4949;
+
   font-weight: 500;
   padding-bottom: 30px;
+
+}
+.contact-section span{
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+.contact-section a{
+  font-size: 15px;
+  font-weight: 500;
+  float: right;
+  margin-right: 60px;
 }
 .contact-section input {
   width: 100%;
@@ -362,39 +772,306 @@ img {
   border: 1px solid transparent;
 }
 #liveToast {
-  border: 1px solid #ff0000a6;
+  border: 1px solid #17e904a6;
   background: #ff000038;
   width: 100%;
 }
 
 /*=========== Footer CSS ===========*/
 
-.footer-section .container {
-  border-top: 2px solid rgba(0, 0, 0, 0.596);
-  padding: 30px 10px;
-}
-.footer-section strong {
-  color: #303030;
-  font-family: "Offside", Sans-serif;
-  font-size: 26px;
-  font-weight: 600;
-}
-.footer-section span {
-  font-family: Open Sans;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #6e6e6e;
-  border-left: 2px solid rgba(0, 0, 0, 0.637);
-  padding-left: 7px;
+.footer-section {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.footer-section i {
-  font-size: 25px;
-  color: #303030;
-  margin-left: 12px;
-  transition: 0.2s ease-in;
+.footer-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer-section i:hover {
+
+.footer-section img {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.footer-section strong {
+  color: #303030;
+  font-family: "Offside", sans-serif;
+  font-size: 20px;
+}
+
+.footer-section span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6e6e6e;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  padding-left: 15px;
+}
+
+.footer-section .socail-icon {
+  display: flex;
+  align-items: center;
+}
+
+.footer-section .socail-icon a {
+  font-size: 16px;
+  color: #303030;
+  margin-left: 20px;
+  transition: color 0.3s ease-in-out;
+  float: right;
+}
+
+.footer-section .socail-icon a:hover {
   color: #24cff1;
+  transform: translateY(-3px);
+}
+
+.footer-section .socail-icon i {
+  display: inline-block;
+  margin-right: 5px;
+  transform: translateY(3px);
+}
+
+.footer-section .socail-icon a:first-child {
+  margin-left: auto; /* Push the icons to the right */
+}
+
+
+
+.footer-section .socail-icon a:last-child {
+  margin-right: 0;
+}
+
+
+
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #F8CB2E;
+  --secondary-color:              #EE5007;
+  --section-bg-color:             #f0f8ff;
+  --custom-btn-bg-color:          #EE5007;
+  --custom-btn-bg-hover-color:    #c01f27;
+  --dark-color:                   #000000;
+  --p-color:                      #717275;
+  --border-color:                 #7fffd4;
+  --link-hover-color:             #B22727;
+
+  --body-font-family:             'Outfit', sans-serif;
+
+  --h1-font-size:                 74px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  18px;
+  --btn-font-size:                14px;
+  --copyright-font-size:          16px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-bold:             700;
+}
+
+
+
+
+
+/*---------------------------------------
+  SECTION               
+-----------------------------------------*/
+
+
+
+
+.tab-content {
+  background-color: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 45px;
+}
+
+
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 62px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .navbar {
+    background-color: var(--dark-color);
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    padding-bottom: 30px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+
+  .hero-section {
+    padding-top: 150px;
+  }
+
+  .pricing-thumb {
+    padding: 35px;
+  }
+
+  .schedule-table h3 {
+    font-size: 22px;
+  }
+
+  .schedule-table th {
+    padding: 20px;
+  }
+
+  .schedule-table tr, 
+  .schedule-table td {
+    padding: 25px;
+  }
+
+  .ticket-section {
+    padding-top: 130px;
+  }
+
+  .ticket-form {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 52px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+}
+
+
+/* ------------------------------ */
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+/* Add your loader styles here */
+
+#loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.bubble-container {
+  display: flex;
+  align-items: center;
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bubbleUpAndDown 1s ease-in-out infinite;
+}
+
+.bubble:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bubble:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bubbleUpAndDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#main-content {
+  display: none;
 }
