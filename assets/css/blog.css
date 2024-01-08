@@ -394,7 +394,6 @@ img {
 }
 
 
-
 /*=========== Footer CSS ===========*/
 
 .footer-section {
@@ -436,10 +435,11 @@ img {
 }
 
 .footer-section .socail-icon a {
-  font-size: 24px;
+  font-size: 16px;
   color: #303030;
   margin-left: 20px;
   transition: color 0.3s ease-in-out;
+  float: right;
 }
 
 .footer-section .socail-icon a:hover {
@@ -458,9 +458,12 @@ img {
 }
 
 
+
 .footer-section .socail-icon a:last-child {
   margin-right: 0;
 }
+
+
 
 
 /* ----------------------------------------------------------- */

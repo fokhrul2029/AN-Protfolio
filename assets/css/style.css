@@ -211,19 +211,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-section .socail-icon a:nth-child(3) {
-  color: #ff0000; /* YouTube red */
+  color: #0077b5; /* LinkedIn blue */
+
+  /* color: #ff0000; YouTube red */
 }
 
 .hero-section .socail-icon a:nth-child(4) {
-  color: #0077b5; /* LinkedIn blue */
+  color: #333; /* GitHub black */
+
 }
 
 .hero-section .socail-icon a:nth-child(5) {
-  color: #333; /* GitHub black */
+  color: #25d366; /* WhatsApp green */
+
 }
 
 .hero-section .socail-icon a:nth-child(6) {
-  color: #25d366; /* WhatsApp green */
+  /*  */
 }
 
 .hero-section .socail-icon a:hover {
