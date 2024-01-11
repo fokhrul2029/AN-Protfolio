@@ -136,7 +136,7 @@
                 <a class="btn btn-primary" href="#contact">Contact</a>
 
                
-                <a class="ball" href="assets/images/New_my_CV.pdf" class="nav-link" download>Get
+                <a class="ball" href="assets/images/New_my_CV.pdf" class="nav-link" onclick="startDownload()" download>Get
                   Resume
                   <div class="span-wrapper">
                     <span class="s1"></span>
@@ -144,11 +144,9 @@
                     <span class="s3"></span>
                   </div>
                 </a>
-                  
-      
               </div>
-
             </div>
+            
 
             <!-- HOme Up scrole auto section -->
             <div class="col-md-6 col-sm-12 d-none d-md-block">
@@ -387,7 +385,7 @@
             <div class="col-md-3 col-sm-6 col-12">
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center text-info fs-1 pt-2">
+                  <h5 id="count1" class="card-title text-center text-info fs-1 pt-2">
                     70%
                   </h5>
                   <p class="card-text text-center">Leet Code</p>
@@ -397,8 +395,8 @@
             <div class="col-md-3 col-sm-6 col-12">
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center text-info fs-1 pt-2">
-                    90+
+                  <h5 id="count2" class="card-title text-center text-info fs-1 pt-2">
+                    90%
                   </h5>
                   <p class="card-text text-center">CodeForce</p>
                 </div>
@@ -407,7 +405,7 @@
             <div class="col-md-3 col-sm-6 col-12">
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center text-info fs-1 pt-2">
+                  <h5 id="count3" class="card-title text-center text-info fs-1 pt-2">
                     70%
                   </h5>
                   <p class="card-text text-center">Code Shef</p>
@@ -417,7 +415,7 @@
             <div class="col-md-3 col-sm-6 col-12">
               <div data-aos="fade-down" data-aos-duration="1000" class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center text-info fs-1 pt-2">
+                  <h5 id="count4" class="card-title text-center text-info fs-1 pt-2">
                     90%
                   </h5>
                   <p class="card-text text-center">CP</p>
@@ -646,12 +644,29 @@
             >
               <img src="assets/images/contact img.png" alt="Contact Image" />
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             <div class="col-md-5">
               
 
               <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel"
                     aria-labelledby="nav-ContactForm-tab">
+                    
 
                 <form id="contactForm" class="custom-form contact-form mb-5 mb-lg-0" action="#" method="post" role="form" action="assets/js/submitFrom.php" onsubmit="showLoading(event)">
                 <div
@@ -724,11 +739,21 @@
           </div>
         </div>
       </section>
+
+      
       
       <!-- Display Click Effect -->
       <div class="ripple"></div>
       <!-- Display Click Effected End -->
 
+      <!-- Time Section Calender --- -->
+      <div class="time-section">
+        <h6 id="time"></h6>
+        <p id="date"></p>
+
+      </div>
+      <!-- Time Section Calender END--- -->
+   
       <!-- =============== Footer Section ================  -->
       <footer class="footer-section">
         <div class="container">
@@ -768,8 +793,10 @@
         </div>
       </footer>
 
-
+  
+      
     </main>
+
     <!-- Bootstrap JS  -->
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Typed.js / js for Typing on Text  -->
@@ -781,8 +808,12 @@
     <script src="assets/js/blog.js"></script>
     <!-- Mouse Click Pointer Effect -->
     <script src="assets/js/rippleEffect.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 
-
+    <script src="countUp.umd.js"></script>
+   
   
   </body>
 </html>
+
+
