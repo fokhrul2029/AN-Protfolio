@@ -99,3 +99,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// Time Sectiom ---------------
+function updateTime() {
+  const dateElement = document.getElementById('date');
+  const timeElement = document.getElementById('time');
+
+  const now = new Date();
+
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = now.toLocaleDateString('en-US', options);
+
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  //For 14Hour Format--
+  const formattedTime = `${addZero(hours)}:${addZero(minutes)}:${addZero(seconds)}`;
+
+  //For 12 Hour Format--
+  // const formattedTime = `${addZero(hours % 12 || 12)}:${addZero(minutes)}:${addZero(seconds)} ${hours >= 12 ? 'PM' : 'AM'}`;
+
+  dateElement.textContent = formattedDate;
+  timeElement.textContent = formattedTime;
+}
+
+function addZero(number) {
+  return number < 10 ? '0' + number : number;
+}
+
+updateTime(); // Initial call
+setInterval(updateTime, 1000); // Update every second
+
+
+
+
+// --------------------------------------------
+
+
+
