@@ -17,6 +17,7 @@ Provide a link to the live demo on Netlify:
 
 - HTML
 - CSS
+- PHP
 - Bootstrap
 - Bootstrap Icons
 - AOS (Animate On Scroll) for animations
