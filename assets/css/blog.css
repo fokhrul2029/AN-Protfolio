@@ -10,10 +10,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Offside&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
 
-
-
-
-
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-family: 'Baloo Paaji', cursive;
@@ -30,7 +26,7 @@ p {
 }
 /* Ripple Effect */
 body {
-  background: #FFFFFF;
+  background: #EDF2F9;
   margin: 0;
   transition: .25s ease-in-out;
   /* background-color: var(--bg); */
@@ -75,8 +71,8 @@ img {
   margin: 0;
   padding: 0;
   height: 80px;
-  background-color: #fffffff9;
-  box-shadow: none;
+  background-color: #EDF2F9;
+  box-shadow: 0px 0px 10px 10px rgb(219, 219, 219);
 }
 
 .navbar-brand {
@@ -116,7 +112,7 @@ img {
 }
 
 .navbar li {
-  margin: 0px 8px 0px 8px;
+
   list-style: none;
 }
 
@@ -130,19 +126,7 @@ img {
   margin-right: 10px;
 }
 
-/* Adjusted size for bi-linkedin */
-.navbar .social-icons a .bi-linkedin {
-  font-size: 55px;
-  color: #000000bb;
-  transition: color 0.3s ease-in-out;
-}
 
-/* Adjusted size for bi-github */
-.navbar .social-icons a .bi-github {
-  font-size: 55px;
-  color: #000000bb;
-  transition: color 0.3s ease-in-out;
-}
 
 .navbar .social-icons a i:hover {
   color: #008bd3;
@@ -165,11 +149,19 @@ img {
 .navbar ul li {
   position: relative;
 }
+.navbar ul li a i{
+  font-size: 20px;
+  color: black;
+ }
+ .navbar ul  .myicons{
+   margin-left: 20px;
+ }
 
 .navbar ul li a {
   font-family: "Roboto", Sans-serif;
   font-size: 15px;
   font-weight: 500;
+  margin-right: 10px;
 }
 
 .navbar ul li a::after {
@@ -240,8 +232,6 @@ img {
   font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));
 }
 
-
-
 /* blog wrapper */
 .blog-card {
   display: -webkit-box;
@@ -249,22 +239,17 @@ img {
   display: -webkit-flex;
   display: flex;
   text-align: left;
-  border: 1px solid #dee2e6;
+  border: 1px solid #bebebe;
   margin: 30px 0px 30px 0px;
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;
-
-  /* background-color: #827c7c; */
-
+  background-color: white;
 }
-/* .blog-card:hover{
-  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
-  border-color: #d3d3d3df;
-} */
+
 .blog-card:hover {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   border-color: transparent;
   transform: translateY(-3px);
 }
@@ -274,20 +259,19 @@ img {
   /* background-color: #111; */
   text-align: center;
   padding-top: 70px;
-
-
 }
 
 .blog-card-img {
   border-radius: 0 0 0 0;
-  width: 70%;
-  height: 70%;
+  /* width: 70%;
+  height: 70%; */
+  height: 150px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .blog-card-body {
-  padding: 30px 20px 10px 30px;
+  padding: 30px 20px 50px 30px;
 }
 
 .blog-card-title {
@@ -309,7 +293,7 @@ img {
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
-  opacity: .7;
+  opacity: 0.7;
   font-size: 13px;
 }
 
@@ -331,13 +315,18 @@ img {
 .blog-card-link + .blog-card-link {
   margin-left: 1.25rem;
 }
+
+.blog-card-body .all-text {
+  padding: 0px 0px 20px 0px;
+  margin: 5px;
+}
 @media (max-width: 991.98px) {
   .blog-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .blog-card .blog-card-header {
     width: 80%;
@@ -345,7 +334,37 @@ img {
     min-width: 80%;
   }
 }
+/* blog bnt funalilty */
+#text_div {
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Adjust the duration and cubic-bezier values as needed */  max-height: 150px; /* Set an initial max-height */
+}
 
+#blog_btn {
+  cursor: pointer;
+  padding-top: 20px;
+}
+#text_div1 {
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+  max-height: 150px; /* Set an initial max-height */
+}
+
+#blog_btn1 {
+  cursor: pointer;
+  padding-top: 20px;
+}
+#text_div2 {
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+  max-height: 150px; /* Set an initial max-height */
+}
+
+#blog_btn2 {
+  cursor: pointer;
+  padding-top: 20px;
+}
+/* blog bnt funalilty End----------------- */
 
 /* testimonial card */
 .testimonial-card {
@@ -465,14 +484,9 @@ img {
   margin-left: auto; /* Push the icons to the right */
 }
 
-
-
 .footer-section .socail-icon a:last-child {
   margin-right: 0;
 }
-
-
-
 
 /* ----------------------------------------------------------- */
 
@@ -487,8 +501,6 @@ img {
   --bezier: cubic-bezier(0.42, 0, 0.58, 1);
   --trans-dur: 0.3s;
 }
-
-
 
 .rating {
   margin: auto;
@@ -718,5 +730,3 @@ img {
     stroke-dashoffset: -12;
   }
 }
-/* <!------------- Review Of my Blog END -----------------------> */
-
