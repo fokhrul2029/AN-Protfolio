@@ -10,6 +10,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Offside&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
 
+
+
+
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-family: 'Baloo Paaji', cursive;
@@ -232,6 +236,8 @@ img {
   font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));
 }
 
+
+
 /* blog wrapper */
 .blog-card {
   display: -webkit-box;
@@ -334,6 +340,8 @@ img {
     min-width: 80%;
   }
 }
+
+
 /* blog bnt funalilty */
 #text_div {
   overflow: hidden;
@@ -349,7 +357,9 @@ img {
   transition: max-height 0.1s ease;
   max-height: 150px; /* Set an initial max-height */
 }
-
+#blog_btn:hover, #blog_btn1:hover, #blog_btn2:hover{
+  color: red;
+}
 #blog_btn1 {
   cursor: pointer;
   padding-top: 20px;
@@ -484,9 +494,14 @@ img {
   margin-left: auto; /* Push the icons to the right */
 }
 
+
+
 .footer-section .socail-icon a:last-child {
   margin-right: 0;
 }
+
+
+
 
 /* ----------------------------------------------------------- */
 
@@ -501,6 +516,8 @@ img {
   --bezier: cubic-bezier(0.42, 0, 0.58, 1);
   --trans-dur: 0.3s;
 }
+
+
 
 .rating {
   margin: auto;
