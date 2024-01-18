@@ -1,4 +1,4 @@
-# AN.Mamun's Protfolio
+# AN.Mamun's Portfolio
 
 ## Overview
 
@@ -11,7 +11,7 @@ Provide a link to the live demo on Netlify:
 [Live Demo](https://anmamun0.netlify.app/)
 
 - Screenshot of a part
-  ![Demo Image](https://github.com/fokhrul2029/AN-Protfolio/assets/105439053/fcc8e695-9911-4704-822b-74f1922bd398)
+  ![Demo Image](https://github.com/fokhrul2029/AN-Protfolio/blob/main/assets/images/web-top-page.png)
 
 ## Technologies Used
 
