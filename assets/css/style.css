@@ -10,7 +10,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Offside&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 /* Ripple Effect */
 body {
-  background: #FFFFFF;
+  background: #EDF2F9;
   /* background-color: var(--bg); */
 
   margin: 0;
@@ -52,6 +52,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
 
   font-family: 'Baloo Paaji', cursive;
+  
 }
 /* =========== = Navbar CSS ============  */
 /* Navbar CSS */
@@ -77,9 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #008bd3;
 }
 
-.navbar-nav {
-  padding: 8px 58px;
-}
+
 
 .navbar button {
   transition: background-color 0.3s ease, border 0.3s ease;
@@ -104,30 +103,34 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0;
   outline: none;
 }
-
+.navbar-nav {
+  margin-right: 57px;
+}
 .navbar ul {
-  background-color: rgba(252, 252, 252, 0);
+  /* background-color: #c7c7c72c; */
   border-radius: 50px;
   box-shadow: 0px 10px 27px -20px rgb(161, 160, 160);
   margin-top: 20px;
-  width: 40%;
+  width: auto;
   align-items: center;
-  padding-left: 100px;
+  padding: 1px 15px;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  right: 0;
+  
 }
-
-.navbar ul:hover {
+/* .navbar ul:hover {
   box-shadow: 0px 10px 37px -15px rgb(161, 160, 160);
-}
-
+} */
 .navbar ul li {
   position: relative;
 }
 
 .navbar ul li a {
   font-family: "Roboto", Sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
+  margin-right: 10px;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -161,13 +164,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100vh;
   background-image: url(./../images/Home_background.png);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 0px 27px -10px rgb(95, 95, 95);
-
-  /* margin-left: 80px 0px 0px 50px; */
+  background-color: #ffffff;
 }
 .hero-section img {
   transition: 0.2s ease-in;
@@ -194,52 +195,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Updated styles for social icons with brand colors and a scale effect on hover */
+
 .hero-section .socail-icon {
   display: flex;
   gap: 20px;
 }
-
 .hero-section .socail-icon a {
   font-size: 20px;
   transition: transform 0.3s ease-in-out;
-}
 
+  /* border: 1px solid rgb(134, 131, 131); */
+  /* border-radius:70%;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 2px rgba(180, 178, 178, 0.747);
+   */
+  
+}
 /* Customize the colors for each social icon */
 .hero-section .socail-icon a:nth-child(1) {
   color: #1877f2; /* Facebook blue */
+  
 }
-
 .hero-section .socail-icon a:nth-child(2) {
   color: #1da1f2; /* Twitter blue */
 }
-
 .hero-section .socail-icon a:nth-child(3) {
   color: #0077b5; /* LinkedIn blue */
-
-  /* color: #ff0000; YouTube red */
 }
-
 .hero-section .socail-icon a:nth-child(4) {
   color: #333; /* GitHub black */
-
 }
-
 .hero-section .socail-icon a:nth-child(5) {
   color: #25d366; /* WhatsApp green */
-
 }
-
 .hero-section .socail-icon a:nth-child(6) {
   /*  */
 }
-
 .hero-section .socail-icon a:hover {
   transform: scale(1.2);
 }
-
 .hero-section .socail-icon i {
   display: inline-block;
-  margin-right: 5px;
+  /* margin-right: 5px; */
   transform: translateY(3px);
 }
 
@@ -260,6 +258,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
 }
+
+
 
 /* Hover effect for the scroll-to-top button */
 #myBtn:hover {
@@ -417,6 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========== About CSS ==================  */
 
+
 .about-section .Card{
   margin-left: -100px;
 }
@@ -429,6 +430,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 250px;
   text-align: center;
   margin: auto;
+  box-shadow: 0px 0px 50px 30px rgb(255, 255, 255);
+
 }
 .about-section .about-img img:hover {
   animation: zoomInOut 0.7s infinite;
@@ -449,7 +452,12 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   background-color: #fff;
   border-radius: 30px;
+  transition: all 0.3s ease;
 
+
+}
+.about-section .Card:hover{
+  transform: translateY(-3px);
 }
 .about-section .Card h1 {
   color: #4a4949;
@@ -500,6 +508,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*=========== Skills-info CSS ===========*/
+
 .skills-info h2 {
   color: #4a4949;
 
@@ -512,11 +521,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  
 }
 .progressBar .progress-bar {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
 }
 .progressBar strong {
@@ -528,16 +539,14 @@ h1, h2, h3, h4, h5, h6 {
 .progressBar .progress-bar span {
   padding: 0 10px;
   font-size: 14px;
+  cursor: pointer;
 }
-
 /*=========== Skills-info CSS END===========*/
 
 /*===========  working info  ===========*/
 .working-info {
   padding: 50px 0;
-  background-color: #ececec59;
   transition: all 0.3s ease;
-
 
 }
 .card-body{
@@ -582,6 +591,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-section {
   padding: 80px 0 10px 0;
   margin-top: -50px;
+  background-color: #fff;
 
 }
 .service-section .col-md-4 .card{
@@ -590,14 +600,14 @@ h1, h2, h3, h4, h5, h6 {
  border-radius: 25px;
  padding-bottom: 30px;
  transition: all 0.3s ease;
- background:rgba(144, 213, 243, 0.082) ;
+ /* background:rgba(22, 150, 255, 0.082) ; */
 
 }
 
 .service-section .card:hover{
-  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
-  /* background: var(--white-color); */
-  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
+  /* box-shadow: 0px 0px 30px -10px rgba(24, 22, 22, 0.555); */
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+
   border-color: transparent;
   transform: translateY(-3px);
 }
@@ -616,6 +626,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-size: 50px;
   padding-bottom: 0px;
+  
 }
 .service-section h5 {
  
@@ -628,7 +639,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   /* text-transform: lowercase; */
   margin-top: 13px;
-  color: #363535;
+
 
 }
 /* ================== View Project Section CSS ===============  */
@@ -636,8 +647,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*=========== experience-section CSS  =============*/
 .experience-section {
-  
   background-color: rgba(230, 230, 230, 0.288);
+  box-shadow: 10px 0px 50px 30px #EDF2F9;
 
 }
 .experience-section h2 {
@@ -658,18 +669,19 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding: 17px 0;
   margin-bottom: 30px;
-  /* transition: all 0.3s ease; */
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+
 
   
 }
 .experience-section .ex-card:hover{
-  box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
-  /* background: var(--white-color); */
-  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
-  /* border-color: transparent; */
-  /* transform: translateY(-3px); */
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  transform: translateY(-3px);
 
 }
+
+
 .experience-section .ex-card i {
   font-size: 64px;
   text-align: center;
@@ -699,22 +711,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .qualification-section .ex-card {
   width: 90%;
-
+  background-color: #fff;
   border: 1px solid #00000038;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 17px 0;
-  /* transition: all 0.3s ease; */
+  transition: all 0.3s ease;
+
 
 }
 .qualification-section .ex-card:hover{
   box-shadow: 0px 0px 30px -10px rgb(154, 152, 152);
-  /* background: var(--white-color); */
-  /* box-shadow: 0 1rem 3rem rgba(0,0,0,.175); */
-  /* border-color: transparent; */
-  /* transform: translateY(-3px); */
+  transform: translateY(-3px);
 
 }
 
@@ -1093,3 +1103,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
   
 }
+
+
+/* -------------------------------------- */
+
