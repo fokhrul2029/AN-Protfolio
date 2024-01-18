@@ -1,4 +1,3 @@
-
 // Get the button
 let mybutton = document.getElementById("myBtn");
 
@@ -17,6 +16,46 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+// "Read me button blog"
+function toggleReadMore() {
+    var textDiv = document.getElementById('text_div');
+    var blogBtn = document.getElementById('blog_btn');
+
+    if (textDiv.style.maxHeight === '150px') { // Check the current max-height
+        textDiv.style.maxHeight = 'none'; // Expand to full height
+        blogBtn.innerHTML = 'Read less <i class="ti-angle-double-left"></i>';
+        
+    } else {
+        textDiv.style.maxHeight = '150px'; // Collapse to the initial max-height
+        blogBtn.innerHTML = 'Read more <i class="ti-angle-double-right"></i>';
+    }
+}
+
+function toggleReadMore1() {
+    var textDiv = document.getElementById('text_div1');
+    var blogBtn = document.getElementById('blog_btn1');
+
+    if (textDiv.style.maxHeight === '150px') { // Check the current max-height
+        textDiv.style.maxHeight = 'none'; // Expand to full height
+        blogBtn.innerHTML = 'Read less <i class="ti-angle-double-left"></i>';
+    } else {
+        textDiv.style.maxHeight = '150px'; // Collapse to the initial max-height
+        blogBtn.innerHTML = 'Read more <i class="ti-angle-double-right"></i>';
+    }
+}
+function toggleReadMore2() {
+    var textDiv = document.getElementById('text_div2');
+    var blogBtn = document.getElementById('blog_btn2');
+
+    if (textDiv.style.maxHeight === '150px') { // Check the current max-height
+        textDiv.style.maxHeight = 'none'; // Expand to full height
+        blogBtn.innerHTML = 'Read less <i class="ti-angle-double-left"></i>';
+    } else {
+        textDiv.style.maxHeight = '150px'; // Collapse to the initial max-height
+        blogBtn.innerHTML = 'Read more <i class="ti-angle-double-right"></i>';
+    }
 }
 
 
@@ -114,3 +153,8 @@ function addZero(number) {
 
 updateTime(); // Initial call
 setInterval(updateTime, 1000); // Update every second
+
+
+
+
+// ----------------------------------
