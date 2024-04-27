@@ -156,16 +156,18 @@ img {
 .navbar ul li a i{
   font-size: 20px;
   color: black;
+  
  }
- .navbar ul  .myicons{
-   margin-left: 20px;
+ .navbar ul  .myicons
+ { 
+  padding: 0px 15px 0px 15px;
  }
+
 
 .navbar ul li a {
   font-family: "Roboto", Sans-serif;
   font-size: 15px;
-  font-weight: 500;
-  margin-right: 10px;
+  font-weight: 500; 
 }
 
 .navbar ul li a::after {
@@ -470,7 +472,12 @@ img {
   display: flex;
   align-items: center;
 }
-
+.footer-section .socail-icon img{
+  filter: grayscale(80%); 
+}
+.footer-section .socail-icon :hover{
+  filter: grayscale(0%); 
+}
 .footer-section .socail-icon a {
   font-size: 16px;
   color: #303030;
