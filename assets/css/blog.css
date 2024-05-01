@@ -199,33 +199,27 @@ img {
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: #ffffff;
+  background-color: #1eb8f4;
   color: rgb(0, 0, 0);
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 100%;
-  box-shadow: 0px 0px 17px 10px rgb(180, 178, 178) ;
-  /* border: 1px solid rgba(143, 144, 145, 0.837); */
-  /* transition: all 0.3s ease; */
+  cursor: pointer; 
+  border-radius: 50%;
+  padding: 15px 10px 10px 10px;
+  transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
 }
-#myBtn .ti-angle-double-up{
-  color: rgb(0, 0, 0);
-  background-color: transparent;
+#myBtn:hover{ background-color: #2bbef8;}
+
+#myBtn .ti-angle-double-up {
+  color: #000000;
   font-size: 20px;
-  border-radius: 100%;
-}
+  background-color: #ffffff;
+  padding: 5px 5px 5px 5px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 
-
-#myBtn:hover {
-
-  background-color: #07d6ffda;
-  border: 2px solid rgb(255, 255, 255);
-  color: rgb(255, 253, 253);
-  /* transition: all 0.3s ease; */
 }
 /* --------Home UP SCEOLe SECTION END --------- */
 
@@ -450,7 +444,7 @@ img {
 .footer-section img {
   width: 60px;
   height: auto;
-  margin-right: 15px;
+  margin-right: 3px;
 }
 
 .footer-section strong {
@@ -493,7 +487,7 @@ img {
 
 .footer-section .socail-icon i {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 3px;
   transform: translateY(3px);
 }
 
